@@ -20,6 +20,10 @@ const oswald = Oswald({
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   title: {
     default: "Movers On The Move | Moving Labor & Delivery Services in Orlando, FL",
     template: "%s | Movers On The Move",

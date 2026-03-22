@@ -3,6 +3,7 @@ import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { getSiteUrl } from "@/lib/site-url";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -18,6 +19,7 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(getSiteUrl()),
   title: {
     default: "Movers On The Move | Moving Labor & Delivery Services in Orlando, FL",
     template: "%s | Movers On The Move",
@@ -30,6 +32,7 @@ export const metadata: Metadata = {
       "Dependable moving labor, furniture delivery, and loading help in Orlando and Central Florida.",
     locale: "en_US",
     type: "website",
+    url: getSiteUrl(),
   },
 };
 

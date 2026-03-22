@@ -79,7 +79,7 @@ export function Footer() {
             rel="noopener noreferrer"
             className="underline-offset-2 transition-colors hover:text-white hover:underline focus-visible:rounded-sm focus-visible:text-mo-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mo-orange"
           >
-            Elevate Digital Co.
+            Elevate Digital Studio.
           </a>
         </div>
       </div>

@@ -1,0 +1,2 @@
+# Normalize line endings; Git will store LF in the repo on checkout per platform.
+* text=auto

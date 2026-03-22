@@ -1,12 +1,17 @@
 /**
  * Canonical site URL for metadata, sitemap, and robots.
- * On Vercel, VERCEL_URL is set at build time. Set NEXT_PUBLIC_SITE_URL when using a custom domain.
+ * Priority: NEXT_PUBLIC_SITE_URL (custom domain) → Vercel production hostname → deployment URL → localhost.
  */
 export function getSiteUrl(): string {
-  return (
-    process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
-    (process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : "http://localhost:3000")
-  );
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
+  if (explicit) return explicit;
+
+  const production = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+  if (production) return `https://${production}`;
+
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`;
+  }
+
+  return "http://localhost:3000";
 }

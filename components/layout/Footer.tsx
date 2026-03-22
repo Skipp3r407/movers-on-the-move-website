@@ -71,6 +71,17 @@ export function Footer() {
         <div className="mt-12 border-t border-white/10 pt-8 text-center text-xs text-mo-slate">
           © {new Date().getFullYear()} {SITE.name}. All rights reserved.
         </div>
+        <div className="mt-6 text-center text-sm text-slate-400">
+          Website Design by{" "}
+          <a
+            href="https://elevatedigitalstudios.net/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline-offset-2 transition-colors hover:text-white hover:underline focus-visible:rounded-sm focus-visible:text-mo-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mo-orange"
+          >
+            Elevate Digital Co.
+          </a>
+        </div>
       </div>
     </footer>
   );
